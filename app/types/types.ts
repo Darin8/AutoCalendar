@@ -14,14 +14,12 @@ export interface Task {
   id: string;
   title: string;
   isCompleted: boolean;
-  durationInSeconds: number;
 }
 
 export interface SupabaseTask {
   id: string;
   title: string;
   is_completed: boolean;
-  duration_seconds: number;
 }
 
 export interface SupabaseRoutine {

@@ -1,14 +1,14 @@
 'use client';
 
 import Timer from '@/components/Timer';
-import RoutineList from '@/components/RoutineList';
-import { Routine } from '@/app/types/types';
+import { Task } from '@/app/types/types';
 import { useEffect, useState } from 'react';
 import { useSession, useSessionContext } from '@supabase/auth-helpers-react';
 import { useRouter } from 'next/navigation';
+import TaskList from '@/components/tasks/TaskList';
 
 export default function Home() {
-  const [currentRoutine, setCurrentRoutine] = useState<Routine>();
+  const [currentTask, setCurrentTask] = useState<Task>();
   const session = useSession();
   const sessionContext = useSessionContext();
   const router = useRouter();
@@ -22,8 +22,8 @@ export default function Home() {
   return session ? (
     <main>
       <div className="grid md:grid-cols-2 gap-6">
-        <Timer routine={currentRoutine} />
-        <RoutineList setCurrentRoutine={setCurrentRoutine} />
+        <Timer task={currentTask} />
+        <TaskList setCurrentTask={setCurrentTask} />
       </div>
     </main>
   ) : null;

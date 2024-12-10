@@ -6,10 +6,7 @@ import { cn } from '@/lib/utils';
 export default function TabNav() {
   const pathname = usePathname();
 
-  const tabs = [
-    { name: 'Home', href: '/' },
-    { name: 'Speedread', href: '/speedread' },
-  ];
+  const tabs = [{ name: 'Home', href: '/' }];
 
   return (
     <div className="border-b">

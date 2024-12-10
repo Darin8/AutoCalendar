@@ -8,8 +8,8 @@ import { Roboto } from 'next/font/google';
 import TabNav from '@/components/TabNav';
 
 export const metadata: Metadata = {
-  title: 'Productivity App',
-  description: 'Track your habits, tasks, and time',
+  title: 'AutoCalendar',
+  description: "Never forget what you've accomplished today.",
 };
 
 const roboto = Roboto({
